@@ -41,8 +41,8 @@ def save_html(content, output_path):
         file.write(content)
 
 def main():
-    # Określenie ścieżki folderu roboczego
-    base_dir = os.path.expanduser("~/Desktop/zadanie rekrutacyjne")
+    # Określenie ścieżki folderu roboczego - macOS
+    base_dir = os.path.expanduser("~/Desktop/oxido-zadanie-rekrutacyjne")
 
     # Ścieżka do pliku artykułu
     article_path = os.path.join(base_dir, "artykul.txt")

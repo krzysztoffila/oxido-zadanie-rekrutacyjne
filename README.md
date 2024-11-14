@@ -31,23 +31,11 @@ Kod HTML zawiera:
 
 ## Instalacja
 
-### Python
-
 1. Zainstaluj zależne biblioteki (np. OpenAI SDK) za pomocą:
    ```bash
    pip install openai
    ```
-2. Skopiuj plik `artykul.txt` do folderu `zadanie rekrutacyjne` na Pulpicie.
-
-### Node.js
-
-1. Zainstaluj zależne pakiety:
-   ```bash
-   npm install openai fs path
-   ```
-2. Skopiuj plik `artykul.txt` do folderu `zadanie rekrutacyjne` na Pulpicie.
-
----
+2. Skopiuj plik `artykul.txt` do folderu `oxido-zadanie-rekrutacyjne` na Pulpicie.
 
 ## Konfiguracja
 
@@ -70,7 +58,7 @@ openai.api_key = "TWOJ_KLUCZ_API"
    python main.py
    ```
 
-Po uruchomieniu, plik `artykul.html` zostanie wygenerowany w folderze `zadanie rekrutacyjne` na Pulpicie.
+Po uruchomieniu, plik `artykul.html` zostanie wygenerowany w folderze `oxido-zadanie-rekrutacyjne` na Pulpicie.
 
 ---
 
