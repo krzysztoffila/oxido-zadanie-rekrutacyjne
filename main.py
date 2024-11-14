@@ -45,10 +45,10 @@ def main():
     base_dir = os.path.expanduser("~/Desktop/zadanie rekrutacyjne")
 
     # Ścieżka do pliku artykułu
-    article_path = os.path.join(base_dir, "article.txt")
+    article_path = os.path.join(base_dir, "artykul.txt")
 
     # Ścieżka do zapisu pliku HTML
-    output_path = os.path.join(base_dir, "article.html")
+    output_path = os.path.join(base_dir, "artykul.html")
     
     # Odczytaj artykuł
     article_content = read_article(article_path)
