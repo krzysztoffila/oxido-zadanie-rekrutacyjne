@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Podgląd Artykułu</title>
+    <style>
+        /* Style głównego dokumentu */
+        html, body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            height: 100%;
+            width: 100%;
+        }
+        
+        /* Iframe zajmuje pełną szerokość i wysokość */
+        iframe {
+            width: 100%;
+            height: 100vh;
+            border: none;
+        }
+        
+        /* Style do zawartości iframe */
+        #iframe-styles {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Style dla zawartości iframe -->
+    <style id="iframe-styles">
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background-color: #f4f4f9;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        h1, h2, h3 {
+            color: #2c3e50;
+            margin-top: 20px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            color: #34495e;
+            text-align: center;
+        }
+        
+        h2 {
+            font-size: 1.8em;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 5px;
+            margin-top: 30px;
+        }
+
+        p {
+            font-size: 1.1em;
+            text-align: justify;
+            margin-bottom: 15px;
+            color: #555;
+        }
+
+        em {
+            color: #8e44ad;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: 20px 0;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        img:hover {
+            transform: scale(1.05);
+        }
+
+        figure {
+            margin: 0;
+            text-align: center;
+            color: #7f8c8d;
+        }
+
+        figcaption {
+            font-style: italic;
+            color: #95a5a6;
+            margin-top: 5px;
+        }
+    </style>
+
+    <iframe id="article-iframe" src="artykul.html"></iframe>
+
+    <script>
+        // Wstrzykiwanie stylów do iframe
+        const iframe = document.getElementById('article-iframe');
+        iframe.onload = function() {
+            const iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
+            const style = document.getElementById('iframe-styles').cloneNode(true);
+            iframeDocument.head.appendChild(style);
+        };
+    </script>
+</body>
+</html>
