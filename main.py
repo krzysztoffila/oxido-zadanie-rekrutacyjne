@@ -41,11 +41,14 @@ def save_html(content, output_path):
         file.write(content)
 
 def main():
+    # Określenie ścieżki folderu roboczego
+    base_dir = os.path.expanduser("~/Desktop/zadanie rekrutacyjne")
+
     # Ścieżka do pliku artykułu
-    article_path = "/Users/kfila/Desktop/zadanie rekrutacyjne/article.txt"
-    
+    article_path = os.path.join(base_dir, "article.txt")
+
     # Ścieżka do zapisu pliku HTML
-    output_path = "/Users/kfila/Desktop/zadanie rekrutacyjne/article.html"
+    output_path = os.path.join(base_dir, "article.html")
     
     # Odczytaj artykuł
     article_content = read_article(article_path)
